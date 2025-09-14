@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body::after {
+    content: "";
+    background: url(/image/wp4254956.png) no-repeat center center/cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(3px) brightness(0.6);
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5),
+                0 20px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    width: 300px;
+}
+
+.headDiv {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.headDiv h2 {
+    margin: 0;
+    color: #333;
+}
+
+.inputDivs {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.inputDivs label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input,
+#submit {
+    border: 1px solid #007bff;
+    height: 35px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#submit {
+    background-color: white;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#submit:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.links a {
+    font-size: 13px;
+    color: #007bff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* 📱 Mobile-friendly */
+@media (max-width: 400px) {
+    .main {
+        width: 90%;
+        padding: 15px 20px;
+    }
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}
